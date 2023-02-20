@@ -1,16 +1,51 @@
 const mongoose = require("mongoose");
 
+// const dataSchema = mongoose.Schema({
+//     //_id : mongoose.Schema.Types.ObjectId,
+//     id_test : {
+//         type : String
+//     },
+//     // 
+//     qr_Data: {
+//         type : String
+//     },
+//     processTime : {
+//         type : Number
+//     }
+// }, {timestamps: true})
+
 const dataSchema = mongoose.Schema({
-    //_id : mongoose.Schema.Types.ObjectId,
-    id_test : {
-        type : String
+    //
+    testID : {
+        type : String,
+        required : true
     },
     // 
-    qr_Data: {
-        type : String
+    stage: {
+        type : String,
+        required : true
     },
-    processTime : {
-        type : Number
+    // 
+    dataQR: {
+        type : String,
+        required : true
+    },
+    // 
+    processStatus: {
+        type : String,
+        required : true
+    },
+    processTimeScanning : {
+        type : Number,
+        required : true
+    },
+    processTimeWidget : {
+        type : Number,
+        required : true
+    },
+    dateTime : {
+        type : String,
+        required : true
     }
 }, {timestamps: true})
 

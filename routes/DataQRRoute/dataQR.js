@@ -59,10 +59,19 @@ const dataQR = require('../../models/DataQR/DataQR_Model');
 
     router.post('/save', async (req,res) => { //pake async kalau save CARA 2
         console.log(req.body) //cek Body
-        const newData = new dataQR({ //masukin info dari body ke salam model database Post
-                    id_scan : req.body.id_scan,
-                    qr_Data:  req.body.qr_Data,
-                    processTime:req.body.processTime
+        // const newData = new dataQR({ //masukin info dari body ke salam model database Post
+        //             id_scan : req.body.id_scan,
+        //             qr_Data:  req.body.qr_Data,
+        //             processTime:req.body.processTime
+        // });
+        const newData = new dataQR({
+            testID : req.body.testID,
+            stage : req.body.stage,
+            dataQR : req.body.dataQR,
+            processStatus : req.body.processStatus,
+            processTimeScanning : req.body.processTimeScanning,
+            processTimeWidget : req.body.processTimeScanning,
+            dateTime : req.body.dateTime
         });
         // Save and validate
         dataQR.create(newData)
