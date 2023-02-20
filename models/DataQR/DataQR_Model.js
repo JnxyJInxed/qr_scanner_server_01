@@ -16,4 +16,4 @@ const dataSchema = mongoose.Schema({
 
 connRekons = mongoose.connection.useDb('QR_Scanned_Data')
 
-module.exports = connRekons.model('dbQR01', dataSchema);
+module.exports = connRekons.model('dbQR02', dataSchema);
