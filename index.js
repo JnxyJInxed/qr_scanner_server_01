@@ -51,6 +51,7 @@ mongoose.connect(
 
 
 //start LISTEN AT PORT:
-app.listen(PORT, function () {
+var server = app.listen(PORT, function () {
 	console.log('Server running');
 });
+server.setTimeout(30000);
